@@ -42,7 +42,7 @@ public class MaylaServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Nome: Mayla Santos do Amaral</h1>");
             out.println("<h1>RA: 12 90 48 20 13 0 59</h1>");
-             out.println("<h3><a href='https://github.com/maylayu/pastajavaweb.git'>GitHub</a></h3>");
+             out.println("<h3><a href='https://github.com/maylayu'>GitHub</a></h3>");
              out.println("<h3><a href='index.html'>Voltar</a></h3>");
             out.println("</body>");
             out.println("</html>");
