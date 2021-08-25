@@ -56,6 +56,8 @@ public class JurosSimplesServlet extends HttpServlet {
             }catch(Exception ex){
                 out.println("<p style='color:red'>"+ex.getMessage()+"</p>");
             }
+            out.println("</table>");
+            out.println("<hr/>");
             out.println("<h3><a href='index.html'>Voltar</a></h3>");
             out.println("</body>");
             out.println("</html>");
