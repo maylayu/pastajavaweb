@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Gastos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+		 <h1>Controle de Gastos</h1>
+	</div>
+        <div class="col-col-6">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">Gastos</span>
+            </button>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">Economizados</span>
+            </button>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">Relatório</span>
+            </button>
+        </nav>
+        </div>
+        <div class="col-col-6">
+            <section>
+                <form action="gasto.jsp">
+                    <div class="form-group">
+                    <!-- <fieldset></fieldset> -->
+                    <label for="text">Produto</label>
+                    <input type="text"  name="prod"><br>
+                    <label for="text">Valor</label>
+                    <input type="number" name="val"><br>
+                    <label for="text">Precisava?</label><br>
+                    <label for="20">Sim</label>
+                    <input type="radio" id="tipo" name="nec" value="s">
+                    <label for="40">Não</label>
+                    <input type="radio" id="tipo" name="nec" value="n"><br>
+                    <input type="submit" value="Cadastrar Gasto">
+                    </div>
+                </form>
+                
+            </section>
+            
+            <section>
+                <table border="0">
+                    <thead>
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>

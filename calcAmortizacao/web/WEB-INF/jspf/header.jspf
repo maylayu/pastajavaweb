@@ -1,0 +1,6 @@
+<%-- any content can be specified here e.g.: lembrando que ta na pasta pra não ser --%>
+<%@ page pageEncoding="UTF-8" %>
+<h1>Calculo de Amortização</h1>
+<a href="<%= request.getContextPath() %>/index.jsp">Início</a> |
+<a href="<%= request.getContextPath() %>/pages/tabela-price.jsp">Calcular</a> 
+<hr/>
