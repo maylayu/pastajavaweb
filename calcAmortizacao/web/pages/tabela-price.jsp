@@ -52,7 +52,7 @@
     </head>
     <body>
         <%@include file="/WEB-INF/jspf/header.jspf" %>
-        <h2>Início</h2>
+        <h2>Calcular financiamento através de Tabela Price</h2>
         <div>
             <form action="tabela-price.jsp">
                 <label>Meses</label><input type="number" name="meses"/><br>
