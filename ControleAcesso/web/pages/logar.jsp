@@ -15,7 +15,7 @@
     
     //Leitura dos atributos
     String requestUsuario = (String) request.getAttribute("usuario");
-    String sessionUsuario = (String) session.getAttribute("usuario");
+   
     %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,7 +27,7 @@
     </head>
     
         <%@include file="../WEB-INF/jspf/MaylaApp.jspf"%>
-        <%if(sessionName==null){%>
+        <%if(sessionUsuario==null){%>
             <div style="color:red">Você não tem permissão para acessar essa página</div>
         <%}else{%>
             <h2>Seus números</h2>
