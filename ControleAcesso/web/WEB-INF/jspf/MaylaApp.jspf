@@ -1,6 +1,6 @@
 <%-- any content can be specified here e.g.: lembrando que ta na pasta pra não ser --%>
 <%@ page pageEncoding="UTF-8" %>
-<%if(request.getParameter("usuario")!=null){
+<%if(request.getParameter("session-login")!=null){
         session.setAttribute("usuario", request.getParameter("usuario"));
         response.sendRedirect(request.getRequestURI());
     }else if(request.getParameter("session-logout")!=null){
