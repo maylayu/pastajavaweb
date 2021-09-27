@@ -1,0 +1,28 @@
+<%-- any content can be specified here e.g.: lembrando que ta na pasta pra não ser --%>
+<%@ page pageEncoding="UTF-8" %>
+<%if(request.getParameter("usuario")!=null){
+        session.setAttribute("usuario", request.getParameter("usuario"));
+        response.sendRedirect(request.getRequestURI());
+    }else if(request.getParameter("session-logout")!=null){
+        session.removeAttribute("usuario");
+        response.sendRedirect(request.getRequestURI());
+    }
+    String sessionUsuario = (String) session.getAttribute("usuario");
+%>
+<h1>Sistema de Login</h1>
+<a href="<%= request.getContextPath() %>/index.jsp">Início</a> |
+<a href="<%= request.getContextPath() %>/pages/logar.jsp">Conferir</a> |
+<a href="<%= request.getContextPath() %>/pages/about.jsp">Sobre</a> 
+<hr/>
+    
+    <%if(sessionUsuario==null){%>
+    <form action="pages/logar.jsp">
+                <label>Usuário</label><input type="text" name="usuario"/><br>
+                <label>Senha</label><input type="password" name="senha"/><br>
+                <input type="submit" name="session-login" value="Entrar"/>
+    </form>
+    <%}else{%>
+        Bem vindo, <%= sessionUsuario %>
+        <input type="submit" name="session-logout" value="Sair"/>
+    <%}%>
+<hr/>
