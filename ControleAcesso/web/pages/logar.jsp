@@ -31,16 +31,14 @@
             <h2>Seus números</h2>
         <div>
         <table border="1">
+            
             <tr>
-                <th>Índice</th>
-                <th>Número</th>
+                <th>Números</th>
+                <% for(int i=1; i<=6; i++){%>
+                <th><%= ((int)(Math.random()*100))%></th>
+                <%}%>
             </tr>
-            <% for(int i=1; i<=6; i++){%>
-            <tr>
-                <td> <%= i %> </td>
-                <td><%= ((int)(Math.random()*100))%></td>
-            </tr>
-            <%}%>
+            
         </table>
         <%}%>
        
