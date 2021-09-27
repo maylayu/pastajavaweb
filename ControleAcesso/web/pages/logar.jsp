@@ -5,10 +5,8 @@
 --%>
 <%
     String usuario = request.getParameter("usuario");
-    String senha = request.getParameter("senha");
-    if(usuario != null && senha!=null){
+    if(usuario != null){
         session.setAttribute("usuario", usuario);
-        session.setAttribute("senha", senha);
         session.setAttribute("counter", 1);
     }
     //Processamento do contador de requisições
