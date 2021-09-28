@@ -3,6 +3,15 @@
 <%if(request.getParameter("session-login")!=null){
         session.setAttribute("usuario", request.getParameter("usuario"));
         response.sendRedirect(request.getRequestURI());
+        if(application.getAttribute("counter")==null){
+        application.setAttribute("counter", 1);
+        }
+        if(session.getAttribute("counter")!=null){
+        int sessionCounter = (int) session.getAttribute("counter");
+        session.setAttribute("counter", sessionCounter+1);
+        }
+    int counter = (int) application.getAttribute("counter");
+    application.setAttribute("counter", counter+1);
     }else if(request.getParameter("session-logout")!=null){
         session.removeAttribute("usuario");
         response.sendRedirect(request.getRequestURI());
@@ -17,11 +26,12 @@
 <hr/>
     
     <%if(sessionUsuario==null){%>
-        <label>Usuário</label><input type="text" name="usuario"/><br>
+        <label>Usuário</label><input type="text" name="usuario"/>
         <input type="submit" name="session-login" value="Entrar"/>
     <%}else{%>
         Bem vindo, <%= sessionUsuario %>
         <input type="submit" name="session-logout" value="Sair"/>
+        <h3>Requisições: <%= counter %></h3>
     <%}%>
 </form>
 <hr/>
