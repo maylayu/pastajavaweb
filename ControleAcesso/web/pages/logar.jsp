@@ -29,7 +29,6 @@
         <div style="color:red">Você não tem permissão para acessar essa página</div>
     <%}else{%>
     <h2>Seus números</h2>
-        <div>
         <table border="2">
             <tr>
                 <th>Números</th>
@@ -41,6 +40,6 @@
         </table>
         <%}%>
        
-        <%@include file="../WEB-INF/jspf/footer.jspf" %>
+    <%@include file="../WEB-INF/jspf/footer.jspf" %>
     
 
