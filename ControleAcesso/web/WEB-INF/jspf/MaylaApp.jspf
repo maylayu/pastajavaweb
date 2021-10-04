@@ -1,23 +1,23 @@
 <%-- any content can be specified here e.g.: lembrando que ta na pasta pra não ser --%>
+<%@page import="java.lang.String"%>
 <%@ page pageEncoding="UTF-8" %>
 
 <%
     String sessionUsuario = (String) session.getAttribute("usuario");
     int sessionCounter = (int) session.getAttribute("counter");
-    
     if(request.getParameter("session-login")!=null){
         session.setAttribute("usuario", request.getParameter("usuario"));
         response.sendRedirect(request.getRequestURI());
-        session.setAttribute("counter", sessionCounter =0);
+        session.setAttribute("counter", sessionCounter=0);
+        
         if(session.getAttribute("counter")!=null){
-            session.setAttribute("counter", sessionCounter +1);
+            session.setAttribute("counter", sessionCounter+1);
         }
-
     }else if(request.getParameter("session-logout")!=null){
         session.removeAttribute("usuario");
         response.sendRedirect(request.getRequestURI());
         session.setAttribute("counter", sessionCounter-1);
-    }  
+    }
 %>
 <h1>Sistema de Login</h1>
 <form method="post">
