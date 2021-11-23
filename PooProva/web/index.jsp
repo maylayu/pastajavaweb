@@ -9,7 +9,7 @@ String usuario = request.getParameter("usuario");
         session.setAttribute("usuario", usuario);
         session.setAttribute("counter", 1);
     }
-    //Processamento do contador de requisições
+    //Processamento do contado r de requisições
     
     //Leitura dos atributos
     String requestUsuario = (String) request.getAttribute("usuario");
