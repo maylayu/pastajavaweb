@@ -216,7 +216,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
 
     private void btnUsuReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuReadActionPerformed
         // TODO add your handling code here:
-        consultar();
+        //consultar();
     }//GEN-LAST:event_btnUsuReadActionPerformed
 
     private void btnUsuUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuUpdateActionPerformed
